@@ -20,4 +20,14 @@ class TestRandomPairs < Minitest::Test
 		assert_equal(2, array_of_pairs[1].count)
 	end
 
+	def test_6_students_returns_three_pairs
+		array_of_pairs = create_random_pairs(["Jennifer", "Shane", "Jenny", "Meg", "Aaron", "John"])
+		assert_equal(3, array_of_pairs.count)
+	end
+
+	def test_7_students_returns_correct_pairs
+		array_of_pairs = create_random_pairs(["Jennifer", "Shane", "Jenny", "Meg", "Aaron", "John", "John R."])
+		assert_equal(3, array_of_pairs[2].count)
+	end
+	
 end

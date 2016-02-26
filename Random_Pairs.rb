@@ -11,6 +11,10 @@ def create_random_pairs(array_of_students)
 		array_of_students.delete(person_two)
 		first_student_pair = [person_one, person_two]
 		group_of_pairs.push(first_student_pair)
+		if array_of_students.count == 1
+			last_person = array_of_students.sample
+			group_of_pairs[2].push(last_person)
+		end
 		end
 		group_of_pairs
 	end
